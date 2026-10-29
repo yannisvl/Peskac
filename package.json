@@ -1,0 +1,14 @@
+{
+  "name": "peskac-desktop",
+  "version": "1.0.0",
+  "description": "A polished five-contract Albanian Peskaç game against three computer players.",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6"
+  }
+}

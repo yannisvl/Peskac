@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071b18" />
+    <title>Peskaç — Five Floors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark"><span>♠</span><span>♥</span></div>
+          <div>
+            <h1>Peskaç</h1>
+            <p>Pesë katet · Five floors</p>
+          </div>
+        </div>
+
+        <div class="contract-progress" id="contract-progress" aria-label="Suite progress"></div>
+
+        <div class="top-actions">
+          <button class="icon-button" id="sound-button" title="Toggle sound" aria-label="Toggle sound">♪</button>
+          <button class="secondary-button" id="rules-button">Rules</button>
+          <button class="primary-button compact" id="new-suite-button">New suite</button>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="score-panel glass-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Suite score</span>
+              <h2>Leaderboard</h2>
+            </div>
+            <span class="deal-label" id="deal-label">Not started</span>
+          </div>
+          <div class="score-list" id="score-list"></div>
+          <div class="score-key">
+            <span><i class="key-dot positive"></i> Current leader</span>
+            <span>Highest total wins</span>
+          </div>
+        </aside>
+
+        <section class="table-wrap">
+          <div class="table-aura"></div>
+          <div class="card-table" id="card-table">
+            <div class="felt-pattern"></div>
+            <div class="player-seat north" id="player-2"></div>
+            <div class="player-seat west" id="player-1"></div>
+            <div class="player-seat east" id="player-3"></div>
+            <div class="player-seat south" id="player-0"></div>
+
+            <div class="table-center">
+              <div class="contract-badge" id="contract-badge">
+                <span class="contract-symbol">♠</span>
+                <div>
+                  <small>Welcome to</small>
+                  <strong>Peskaç</strong>
+                </div>
+              </div>
+              <div class="trick-area" id="trick-area"></div>
+              <div class="turn-message" id="turn-message">Start a suite when you are ready</div>
+            </div>
+          </div>
+
+          <div class="human-hand-area">
+            <div class="hand-hint" id="hand-hint">Your hand will appear here</div>
+            <div class="human-hand" id="human-hand"></div>
+          </div>
+        </section>
+
+        <aside class="activity-panel glass-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">At the table</span>
+              <h2>Game log</h2>
+            </div>
+          </div>
+          <div class="game-log" id="game-log"></div>
+          <div class="contract-tip" id="contract-tip">
+            <span class="tip-icon">✦</span>
+            <p>Start a suite to see strategy hints for each contract.</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <div class="modal-layer open" id="modal-layer" role="dialog" aria-modal="true">
+      <div class="modal-card" id="modal-card"></div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
