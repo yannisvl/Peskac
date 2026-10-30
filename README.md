@@ -4,6 +4,9 @@
 
 Play one human against three computer players across five contracts: Kupat, Çupat, Derri, Duart and Shtatat. The Electron interface includes legal-card highlighting, cumulative scoring, a game log and an explanation of the implemented rules.
 
+<img width="1412" height="862" alt="image" src="https://github.com/user-attachments/assets/245c7fb3-5b29-46c9-acdf-c41de4777ecd" />
+
+
 ## Algorithmic focus
 
 The computer players use heuristics that change with the contract: card counting, inference about void suits, penalty avoidance and suit-management decisions. Their decision interface is based on the player's hand and observable game information. This is a heuristic game-playing project, without a claim of optimal play or a measured win-rate benchmark.
